@@ -1,0 +1,32 @@
+<!--
+  Generated template for the TeamHome page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>{{team.name}}</ion-title>
+      <button ion-button icon-only (click)="goHome()">
+        <ion-icon name="home"></icon-icon>
+      </button>
+  </ion-navbar>
+  <h2>Team Detail</h2>
+  <h3>Name: {{team.name}}</h3>
+
+  <ion-tab tabTitle="Team" [root]="teamDetailTab" [rootParams]=team tabIcon="basketball"></ion-tab>
+<ion-tab tabTitle="Standings" [root]="standingsTab" [rootParams]=team tabIcon="podium"></ion-tab>
+
+</ion-header>
+
+ this.navCtrl.parent.parent.popToRoo();
+
+<ion-tabs>
+     <ion-tab tabTitle="Team" [root]="teamDetailTab" tabIcon="basketball"></ion-tab>
+     <ion-tab tabTitle="Standings" [root]="standingsTab" tabIcon="podium"></ion-tab>
+</ion-tabs>
+
+<ion-content padding>
+
+</ion-content>
